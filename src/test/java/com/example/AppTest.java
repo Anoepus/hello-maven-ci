@@ -19,5 +19,10 @@ public class AppTest {
     public void testMultiply() {
         assertEquals(6, App.multiply(2, 3));
     }
+
+    @Test
+    public void epicFail() {
+        assertEquals(4, App.multiply(3, 2));
+    } 
 }
 
