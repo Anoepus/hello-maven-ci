@@ -48,10 +48,10 @@ jobs:
     - name: Build and push Docker image
       if: github.event_name == 'push' && github.ref == 'refs/heads/main'
       run: |
-        docker build -t ghcr.io/env.OWNER_LC/hello-maven:latest .
-        docker build -t ghcr.io/env.OWNER_LC/hello-maven:${{ github.sha }} .
-        docker push ghcr.io/env.OWNER_LC/hello-maven:latest
-        docker push ghcr.io/env.OWNER_LC/hello-maven:${{ github.sha }}
+        docker build -t ghcr.io/${OWNER_LC}/hello-maven:latest .
+        docker build -t ghcr.io/${OWNER_LC}/hello-maven:${{ github.sha }} .
+        docker push ghcr.io/${OWNER_LC}/hello-maven:latest
+        docker push ghcr.io/${OWNER_LC}/hello-maven:${{ github.sha }}
 
     - name: List Docker images
       run: docker images | grep hello-maven
