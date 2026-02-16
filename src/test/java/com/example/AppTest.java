@@ -22,7 +22,7 @@ public class AppTest {
 
     @Test
     public void epicFail() {
-        assertEquals(4, App.multiply(3, 2));
+        assertEquals(4, App.multiply(2, 2));
     } 
 }
 
